@@ -100,6 +100,7 @@ public class GamePlayController : MonoBehaviour
 
     public void GameOver()
     {
+        SoundController.Instance.PlayAudio(SoundController.Instance.gameOver, 0.3f, false);
         Time.timeScale = 0;
         uiController.GameOver();
     }
@@ -168,6 +169,7 @@ public class GamePlayController : MonoBehaviour
 
     public void Reset()
     {
+        SoundController.Instance.PlayAudio(SoundController.Instance.bg, 0.6f, true);
         Time.timeScale = 1;
 
         time = timeOfGame;
